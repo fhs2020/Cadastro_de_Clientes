@@ -1,0 +1,72 @@
+﻿@model FFCJardinagens.Models.Orcamento
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Excluir</h2>
+
+<h3>Certeza que deseja excluir este orçamento?</h3>
+<div>
+    <h4>Orçamento</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ClienteID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClienteID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Quantidade)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Quantidade)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descriminação)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descriminação)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProdutoUnidade)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProdutoUnidade)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProdutoTotal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProdutoTotal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ValorTotal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ValorTotal)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Excluir" class="btn btn-danger" /> |
+            @Html.ActionLink("Voltar para lista de orçamentos", "Index")
+        </div>
+    }
+</div>

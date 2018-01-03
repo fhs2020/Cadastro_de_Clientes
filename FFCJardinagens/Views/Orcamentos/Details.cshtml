@@ -1,0 +1,66 @@
+﻿@model FFCJardinagens.Models.Orcamento
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalhes</h2>
+
+<div>
+    <h4>Orçamento</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Cliente
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClienteID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Quantidade)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Quantidade)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descriminação)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descriminação)
+        </dd>
+
+        <dt>
+            P. Unidade
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProdutoUnidade)
+        </dd>
+
+        <dt>
+            P. Total
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProdutoTotal)
+        </dd>
+
+        <dt>
+            Valor Total
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ValorTotal)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Voltar para lista de orçamentos", "Index")
+</p>
